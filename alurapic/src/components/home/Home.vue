@@ -13,9 +13,9 @@
 </template>
 
 <script>
+import Painel from '../shared/painel/Painel.vue';
+import Imagem from '../shared/imagem-responsiva/ImagemResponsiva.vue';
 
-import Painel from '../components/shared/painel/Painel.vue'; 
-import Imagem from '../components/shared/imagem-responsiva/ImagemResponsiva';
 export default {
 
   components:{
