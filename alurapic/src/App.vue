@@ -1,12 +1,6 @@
 <template>
   <div class="corpo">
-    <nav>
-      <ul>
-        <li v-for="route in routes">
-          <router-link :to="route.path ? route.path : '/'">{{route.titulo}}</router-link>
-        </li>
-      </ul>
-    </nav>
+    <menu :rotas="routes" />
     <transition name="pagina">
       <router-view/>
     </transition>
@@ -15,8 +9,13 @@
 
 <script>
 import {routes} from './routes';
+import Menu from './components/shared/menu/Menu.vue';
 
 export default {
+  components:{
+    'menu': Menu
+  }
+  ,
   data(){
     return{
       routes
